@@ -1,0 +1,85 @@
+﻿<div class="footer">
+	<div class="container">
+		<div class="col-md-3 grid_3">
+			<h4>Naviguer</h4>
+			<ul class="f_list f_list1">
+				<li><a href="{{ path('home_homepage') }}">Home</a></li>
+				<li><a href="{{ path('home_loginpage') }}">Sign In</a></li>
+				<li><a href="{{ path('home_registrationpage') }}">Join Now</a></li>
+				<li><a href="{{ path('job_about') }}">About</a></li>  
+			</ul>
+			<ul class="f_list">
+				<li><a href="{{ path('job_features') }}">Usage</a></li>
+				<li><a href="{{ path('job_terms') }}">Conditions</a></li>
+				<li><a href="{{ path('home_contactpage') }}">Contact Us</a></li>
+				<li><a href="{{ path('job_add') }}">Post a Job</a></li>
+			</ul>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="col-md-3 grid_3">
+			<h4> Suivez Nous</h4>
+			<div class="footer-list">
+			  <ul>
+				<li><i class="fa fa-twitter tw1"> </i><p><span class="yellow"><a href="https://twitter.com/DakarJobs"  target="_blank">@DakarJobs</a></span>  sur twitter</p></li>
+				<li><i class="fa fa-twitter tw1"> </i><p><span class="yellow"><a href="https://plus.google.com/u/0/113702378639028705039"   target="_blank">DakarJobs</a></span>  sur Google+</p></li>
+				<li><i class="fa fa-facebook tw1"> </i><p><span class="yellow"><a href="https://web.facebook.com/DakarJobs-184193405568425/"   target="_blank">DakarJobs</a></span>  sur facebook</p></li>
+			  </ul>
+			</div>
+		</div>
+		<div class="col-md-3 grid_3">
+			<h4>DakarJobs</h4>
+			<p>DakarJobs est une platforme de recherche d'emploi sur le Senegal. Nous permettons aux demandeurs d'emplois d'acceder facilement aux offres d'emplois disponibles sur Dakar et dans les autres Regions du Senegal. </p>
+		</div>
+		<div class="col-md-3 grid_3">
+			<h4>Sign up for our newsletter</h4>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</p>
+			<form>
+				<input type="text" class="form-control" placeholder="Enter your email">
+				<button type="button" class="btn red">Subscribe now!</button>
+		    </form>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="footer_bottom">	
+  <div class="container">    
+    <div class="col-sm-2">
+  		<ul class="f_list2">
+			 {% for region in regions|slice(0,5) %}	
+			 <li>
+			 <a href="{{ path('region_view', {'id': region.id}) }}">{{region.name}} </a>
+			 </li>
+			 {% endfor %}	
+	    </ul>
+  	</div>
+  	<div class="col-sm-2">
+  		<ul class="f_list2">
+			 {% for region in regions|slice(4,5) %}	
+			 <li>
+			 <a href="{{ path('region_view', {'id': region.id}) }}">{{region.name}}</a>
+			 </li>
+			 {% endfor %}	
+	    </ul>
+  	</div>
+  	<div class="col-sm-2">
+  		<ul class="f_list2">
+			 {% for region in regions|slice(8,5) %}	
+			 <li>
+			 <a href="{{ path('region_view', {'id': region.id}) }}">{{region.name}} </a>
+			 </li>
+			 {% endfor %}	
+	    </ul>
+  	</div>
+	
+	
+  	<div class="col-sm-6 footer_text">
+       <p>"Facilitons la recherche d'emploi et la recherche de personnels en mettant les offres sur DakarJobs et nos CV en ligne. DakarJobs est une opportunite pour offrire des opportunites.Allez vers les demandeurs d'emplois et faites decouvrire votre entreprise aux jeunes talents sur DakarJobs."</p>
+  	</div>
+  	<div class="clearfix"> </div>
+	<div class="copy">
+		<p>Copyright ©  {{ "now"|date("Y") }} DakarJobs. All Rights Reserved . Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> & Developed by <a href="http://innovativelabs.prestatuts.com/" target="_blank">InnovativeLabs</a></p>
+	</div>
+  </div>
+</div>
+</body>
+</html>			

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DakarJobs|Trouver de l'emploi au Senegal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="DakarJobs,Trouver de l'emploi au Senegal, un emploi a Dakar, Offre d'emploi Senegal, 
+rechercher un travail au Senegal, deposer son CV au Senegal, travailler, Dakar, Senegal, Mon CV en ligne" />
+
+<link rel="icon" href="{{ asset('bundles/home/favicon.png') }}" type="image/png" sizes="16x16">
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+{% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/home/css/bootstrap-3.1.1.min.css') }}" type="text/css" media="all" />
+			<link rel="stylesheet" href="{{ asset('bundles/home/css/style.css') }}" type="text/css" media="all" />
+			<!----font-Awesome----->
+			<link rel="stylesheet" href="{{ asset('bundles/home/css/font-awesome.css') }}" type="text/css" media="all" />
+            <!----font-Awesome----->			
+            <link href='//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+			<!--<link rel="stylesheet" href="{{ asset('bundles/home/css/demo.css') }}" type="text/css" media="all" />-->
+           			
+{% endblock %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script type="text/javascript" src="{{ asset('bundles/home/js/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/js/bootstrap.min.js') }}"></script>
+	
+
+<!-- Custom Theme files -->
+</head>
+<body>
+<!--- Nav-->	
+{{ include('HomeBundle::HomePage/header_nav.html.twig') }}	
+<!--- End Nav -->	
+
+	{% block content %}{% endblock %}	
+	
+<!--- Footer-->	
+{{ include('HomeBundle::HomePage/footer.html.twig') }}	
+<!--- End Footer-->	
+ 

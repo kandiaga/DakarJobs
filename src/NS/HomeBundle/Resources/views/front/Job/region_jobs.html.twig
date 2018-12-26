@@ -1,0 +1,260 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "JobsByCategoryPage" %}
+{% block content %}	 
+{#{ include("HomeBundle:front/Job:menu.html.twig") }#}
+<div class="banner_1">
+	{{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">  
+
+ <a class="btn btn-blog pull-right marginBottom10" href="{{ path('job_add') }}">Add New job</a> 
+    <div class="single">  
+	
+	<h2>{{region_name}}</h2>
+	
+	   <div class="col-md-9 single_right">
+	      <div class="but_list">
+	       <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+			<ul id="myTab" class="nav nav-tabs" role="tablist">
+			  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Available jobs</a></li>
+			  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Show Descriptions</a></li>
+		   </ul>
+		<div id="myTabContent" class="tab-content">
+		  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+		    {% for job in Joblist %}
+			<div class="tab_grid">
+			    <div class="jobs-item with-thumb">
+				    <div class="thumb"><a href="{{ path('job_view', {'id': job.id}) }}"><img src="{{ asset('bundles/home/images/a2.jpg') }}" class="img-responsive" alt=""/></a></div>
+				    <div class="jobs_right">
+						<div class="date">
+						
+						{% if job.updatedAt is not null %} 
+                        updated <span> {{ job.updatedAt|date('d/m/Y') }}</span> {% else %}
+                     posted <span> {{ job.date|date('d/m/Y') }} </span>
+                     {% endif %} 
+						
+						</div>
+						<div class="date_desc"><h6 class="title"><a href="{{ path('job_view', {'id': job.id}) }}">{{ job.title }}</a></h6>
+						  <span class="meta">Region:{{ job.location }}</span>
+						</div>
+						<div class="clearfix"> </div>
+                        <ul class="top-btns">
+							 <li><a href="#" class="fa fa-money"></a></li>
+							<li><a href="#" class="fa fa"></a>500.000 FCFA</li>
+						</ul>
+						<p class="description">{{ job.description }} <a href="{{ path('job_view', {'id': job.id}) }}" class="read-more">Read More</a></p>
+                    </div>
+					<div class="clearfix"> </div>
+				</div>
+			 </div>		
+              {% else %}
+              No Job Yet!
+              {% endfor %}			 
+			 
+		  </div>
+		  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+		    {% for job in Joblist %}
+			<div class="tab_grid">
+			    <div class="jobs-item with-thumb">
+				   <div class="jobs_right">
+						<div class="date">
+						{% if job.updatedAt is not null %} 
+                        updated <span> {{ job.updatedAt|date('d/m/Y') }}</span> {% else %}
+                     posted <span> {{ job.date|date('d/m/Y') }} </span>
+                     {% endif %} 
+						</div>
+						<div class="date_desc"><h6 class="title"><a href="{{ path('job_view', {'id': job.id}) }}">{{ job.title }}</a></h6>
+						  <span class="meta">{{ job.location }}</span>
+						</div>
+						<div class="clearfix"> </div>
+                        <ul class="top-btns">
+							<li><a href="#" class="fa fa-plus toggle"></a></li>
+							<li><a href="#" class="fa fa-star"></a></li>
+							<li><a href="#" class="fa fa-link"></a></li>
+						</ul>
+						<p class="description">{{ job.description }} <a href="{{ path('job_view', {'id': job.id}) }}" class="read-more">Read More</a></p>
+                    </div>
+					<div class="clearfix"> </div>
+				</div>
+			 </div>			 
+			 {% else %}
+              No Job Yet!
+              {% endfor %}			 
+		  </div>
+	  </div>
+     </div>
+    </div>
+	<ul class="pagination"> 
+     {% for p in range(1, nbPages) %}
+    <li{% if p == page %} class="active"{% endif %}>
+      <a href="{{ path('home_jobspage', {'page': p}) }}">{{ p }}</a>
+    </li>
+     {% endfor %}
+      </ul>
+    <ul class="pagination jobs_pagination">	
+         <li class="disabled">
+		 <a href="{{ path('home_jobspage', {'page': 2}) }}" aria-label="Previous"><span aria-hidden="true">«</span></a></li>		
+		{% for p in range(1, nbPages) %}
+		 
+         <li{% if p == page %} class="active"{% endif %}>
+          <a href="{{ path('home_jobspage', {'page': p}) }}"><span class="sr-only">{{ p }}</span></a>
+         </li>		 
+        {% endfor %}
+		<li><a href="{{ path('home_jobspage', {'page': 1}) }}" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+		
+	</ul>
+   </div>
+   <div class="col-md-3">
+	   	  <div class="widget_search">
+			<h5 class="widget-title">Search</h5>
+			<div class="widget-content">
+				<span>I'm looking for a ...</span>
+                <select class="form-control jb_1">
+					<option value="0">Job</option>
+					<option value="">Category</option>
+					<option value="">Category</option>
+					<option value="">Category</option>
+					<option value="">Category</option>
+				</select>
+                <span>in</span>
+                <input type="text" class="form-control jb_2" placeholder="Location">
+                <input type="text" class="form-control jb_2" placeholder="Industry / Role">
+                <input type="submit" class="btn btn-default" value="Search">
+			</div>
+		  </div>
+	   	  <div class="col_3">
+	   	  	<h3>Work Experiance</h3>
+	   	  	  <table class="table">
+                    <tbody>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Senior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Middle
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Junior
+                            </td>
+                            <td>
+                                (56)
+                            </td>
+                        </tr>
+                </tbody>
+             </table>
+	   	  </div>
+	   	  <div class="col_3">
+	   	  	<h3>Work Permit</h3>
+	   	  	<table class="table">
+                    <tbody>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Full time
+                            </td>
+                        </tr>
+                        <tr class="unread checked">
+                            <td class="hidden-xs">
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td class="hidden-xs">
+                                Parttime
+                            </td>
+                        </tr>
+                    </tbody>
+             </table>
+	   	  </div>
+	   </div>
+  <div class="clearfix"> </div>
+ </div>
+</div>
+
+
+{% endblock %}

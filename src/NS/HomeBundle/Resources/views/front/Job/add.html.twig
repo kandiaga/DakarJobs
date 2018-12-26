@@ -1,0 +1,86 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "AddJobsPage" %}
+{% block content %}
+<div class="container">
+    <div class="single">  
+	   <div class="form-container">
+<h2>Ajouter un emploi</h2>
+
+<form class="form-horizontal"  action="{{ path('job_add') }}" method="post" {{ form_enctype(form) }}>
+
+    <div class="form-group"> 
+    <label class="control-label col-sm-2" >{{ form_label(form.title,'Titre:') }}</label>
+	<div class="col-sm-10">
+     {{ form_errors(form.title) }}
+     {{ form_widget(form.title, { 'attr':{'class': 'form-control' }}) }}	
+     </div>
+	  </div>
+	 
+	<input type="hidden"  name="id_customer"  value="{{customer_id}}">
+	
+	<div class="form-group">
+	<label class="control-label col-sm-2" > {{ form_label(form.id_category,'Catégorie:') }}</label>
+	<div class="col-sm-10">
+	{{ form_errors(form.id_category) }}
+    {{ form_widget(form.id_category, { 'attr':{'class': 'form-control' }}) }}	
+   </div>
+    </div>
+	
+	
+	
+	<div class="form-group">
+	<label class="control-label col-sm-2" > {{ form_label(form.id_region,'Localité:') }}</label>
+	<div class="col-sm-10">
+	{{ form_errors(form.id_region) }}
+    {{ form_widget(form.id_region, { 'attr':{'class': 'form-control' }}) }}	
+   </div>
+    </div>
+   
+   <div class="form-group">
+    <label class="control-label col-sm-2" >{{ form_label(form.description,'Description:') }}</label>
+	<div class="col-sm-10">
+    {{ form_errors(form.description) }}
+    {{ form_widget(form.description, { 'attr':{'class': 'form-control' }}) }}	
+    </div>
+   </div>
+   
+	
+	<div class="form-group">
+      <label class="control-label col-sm-2" >{{ form_label(form.requirements,'Compétances Requises:') }}</label>
+      <div class="col-sm-10">
+	    {{ form_errors(form.requirements) }}
+        {{ form_widget(form.requirements, { 'attr':{'class': 'form-control'}}) }}	
+      </div>
+    </div>
+	
+	
+	
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"   name="published"  checked="checked">Publié</label>
+        </div>
+      </div>
+    </div>
+	
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">       
+		{{ form_widget(form.ajouter, { 'attr':{'class': 'btn btn-default'}}) }}
+      </div>
+    </div>
+	
+    {{ form_rest(form) }}
+
+    
+</form>
+
+ </div>
+ </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

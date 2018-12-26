@@ -1,0 +1,230 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "LoginPage" %}
+{% block content %}
+<div class="banner_1">
+	{{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+    <div class="single">  	      
+	   <div class="form-container" >
+        <h2>Details de votre CV: {{resume.resume_alias}} </h2>        
+			
+	   <h3>{{resume.resume_firstname}}	{{resume.resume_lastname}}</h3>	
+        
+		{#{resume.resume_logo}#}
+		
+		
+        
+		<h3>Formations/Etudes</h3>
+		
+		<div class="row">	   
+     <div class="form-group col-md-12">	
+	     <label for="intro"  class="col-md-3 control-lable"><h3>Niveau d'étude:</h3></label>	
+	    <div class="col-md-9">
+		{{resume.resume_diplome_level}}  Bac +4
+		<p class="help-block">Remplissez les champs suivant:</p>
+		</div>
+	 </div>		
+   </div>     
+        
+		
+		<div class="row">	   
+     <div class="form-group col-md-12">	
+	     <label for="intro"  class="col-md-3 control-lable"> <h3>Diplôme Obtenu:</h3></label>	
+	    <div class="col-md-9">
+		{{resume.resume_diplome}}
+		<p class="help-block">Spécialisation:</p>
+		</div>
+	 </div>		
+   </div>	         
+        
+		
+		
+			   	
+       
+       <div class="row">	   
+     <div class="form-group col-md-12">	
+	     <label for="intro"  class="col-md-3 control-lable"> <h3>Ecole - Etablissement:</h3></label>	
+	    <div class="col-md-9">
+		 {{resume.resume_diplome_university}}
+		<p class="help-block">Remplissez les champs suivant:</p>
+		</div>
+	 </div>		
+   </div>			
+        
+	   
+	    <div class="row">	   
+     <div class="form-group col-md-12">	
+	     <label for="intro"  class="col-md-3 control-lable"><h3>Période :</h3>	</label>	
+	    <div class="col-md-9">
+		{{resume.resume_diplome_year}}  
+		<p class="help-block"> deSemptembre 2005 à Juillet  2010</p>
+		</div>
+	 </div>		
+   </div>	     
+
+        
+		
+		
+		nka
+		
+		
+		
+    </div>	
+	
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<p style="float:left" >		
+		<a  href="#"  class="button btn btn-default standard-checkout button-medium" > 
+		<i class="icon-chevron-left left"></i>
+		View All Events
+		</a>
+		
+</p>
+<div class="container">
+	<div class="row">
+		
+        <div class="receipt-main col-xs-10 col-sm-10 col-md-12 ">
+           <div class="row">
+    			<div class="receipt-header">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<div class="receipt-left">
+						{#{resume.resume_logo}#}
+			<img class="img-responsive" alt="iamgurdeeposahan" src="{{ asset('bundles/home/images/a2.jpg') }}" style="border-radius: 43px;">
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 text-right">
+						<div class="receipt-right">
+						<h5>Contact:</h5>
+							<p>{{resume.resume_phone}} <i class="fa fa-phone"></i></p>
+							<p>{{resume.resume_email}} <i class="fa fa-envelope-o"></i></p>							
+							</td>
+                            <td>     
+						</div>
+					</div>
+				</div>
+            </div>			
+			<div class="row">
+				<div class="receipt-header receipt-header-mid">
+					<div class="col-xs-8 col-sm-8 col-md-8 text-left">
+						<div class="receipt-right">
+							<h2>{{resume.resume_firstname}}	{{resume.resume_lastname}}</h2>													
+							<p><b>Ville:</b>Dakar{#{resume.resume_region}#}</p>
+		                    <p><b>Sex:</b> Masculin</p>
+		                    <p><b>Age:</b> 35 ans </p>
+                            <p><b>Email:</b>{{resume.resume_email}}</p>	  
+                            <p><b>Phone:</b> {{resume.resume_phone}}</p>
+		                    <p><b>Address:</b>{{resume.resume_address_one}}</p>  
+                            <p><b>Address Suite:</b>{{resume.resume_address_two}}</p>
+						</div>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4">
+						<div class="receipt-left">
+							<h1>{{resume.resume_firstname}}	{{resume.resume_lastname}}</h1>
+						</div>
+					</div>
+				</div>
+            </div>
+			
+            <div>         
+		 <h3>Experience de travail: 5 ans</h3>		
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-md-9"><div class="rte">{{resume.resume_diplome_year}}  </div></td>
+                            <td class="col-md-3">							 
+							<ul class="toggle-footer" style="">
+                        	<li>	
+                            				
+            		       <i class="icon-map-marker"></i> {{resume.resume_diplome_year}}  
+                           					   
+					       </li>                                    	
+                           </ul>							
+							</td>
+                        </tr>             
+                        
+                     <tr>
+                            <td class="text-right">
+                            <p>
+                                <strong>Start Date: </strong>
+                            </p>
+                            <p class="fa fa-clock-o">
+                                <strong>Start Time: </strong>
+                            </p>
+							<p>
+                                <strong>End Date:</strong>
+                            </p>
+							<p >
+                                <strong>End time:</strong>
+                            </p>
+							</td>
+                            <td>
+                            <p>
+                                <strong>{{resume.resume_diplome_year}}  </strong>
+                            </p>
+                            <p>
+                                <strong>{{resume.resume_diplome_year}}  </strong>
+                            </p>
+							<p>
+                                <strong>{{resume.resume_diplome_year}}  </strong>
+                            </p>
+							<p>
+                                <strong>{{resume.resume_diplome_year}}  </strong>
+                            </p>
+							</td>
+                        </tr>                   
+                    </tbody>
+                </table>
+            </div>
+		
+		   <h2>Compétances</h2>		  
+		{{resume.resume_skills}}   
+		   
+		<hr/>
+			<div class="row">
+				<div class="receipt-header receipt-header-mid receipt-footer">
+					<div class="col-xs-8 col-sm-8 col-md-8 text-left">					
+						<div class="receipt-right">
+						<p><b>Langues:</b></p>						
+						</div>
+                        <h1>French, English, Russian.</h1>						
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4">
+						<div class="receipt-left">
+						<b>Loisirs:</b></p>                        					
+						</div>
+						<h1>{{resume.resume_hobby}}</h1>
+					</div>
+				</div>
+            </div>
+			
+        </div>   
+		
+	</div>
+</div>
+<p style="float:left" >		
+		<a  href="#"  class="button btn btn-default standard-checkout button-medium" > 
+		<i class="icon-chevron-left left"></i>
+		View All Events
+		</a>
+</p>
+
+
+
+{% endblock %}

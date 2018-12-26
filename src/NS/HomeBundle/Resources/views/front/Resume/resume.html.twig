@@ -1,0 +1,36 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "LoginPage" %}
+{% block content %}
+<div class="banner_1">
+	{{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+    <div class="single">  
+   
+   <p>
+ <a class="btn btn-default pull-right marginBottom10" href="{{ path('job_resume_add') }}">
+ <i class="glyphicon glyphicon-chevron-right"></i>
+ Ajouter un nouveau CV
+ </a> 
+  </p> 	
+	<div class="form-container" >
+        <h2>Liste de vos  CV</h2>	
+		
+			{% for resume in my_resumes %}
+			<h6 class="title"><a href="{{ path('job_resume_view', {'id': resume.id}) }}">{{ resume.resume_alias}}</a></h6>
+			
+			{% else %}
+              <p>
+             <a class="btn btn-default pull-right marginBottom10" href="{{ path('job_resume_add') }}">
+           <i class="glyphicon glyphicon-chevron-right"></i>
+           Ajouter un CV
+            </a> 
+            </p> 	
+              {% endfor %}	
+	    
+    </div>	
+	
+ </div>
+</div>
+
+{% endblock %}

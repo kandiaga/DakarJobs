@@ -1,0 +1,14 @@
+﻿{# src/SeneMarket/SeneMarketSandagaBundle/Resources/views/Advert/menu.html.twig #}
+
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+
+<ul class="nav nav-pills nav-stacked">
+  {% for job in listJobs %}
+    <li>
+      <a href="{{ path('job_view', {'id': job.id}) }}">
+        {{ job.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

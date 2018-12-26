@@ -1,0 +1,27 @@
+{# src/SeneMarket/SeneMarketSandagaBundle/Resources/views/Advert/edit.html.twig #}
+
+{% extends "SeneMarketSandagaBundle::layout.html.twig" %}
+
+{% block title %}
+  Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Modifier une annonce</h2>
+
+  {{ include("SeneMarketSandagaBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous editez une annonce deja existante, merci de ne pas changer
+    l'esprit generale de l'annonce deja publiee.
+  </p>
+
+  <p>
+    <a href="{{ path('sene_market_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour a l'annonce
+    </a>
+  </p>
+
+{% endblock %}

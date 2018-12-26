@@ -1,0 +1,70 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "JobsPage" %}
+{% block content %}	 
+<div class="banner_1">   
+   {{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+<div class="single"> 	 
+
+<h2 style="margin-top:20px; margin-bottom:50px;margin-left:100px;">Lister les offres</h2>
+	
+<section style="margin-top:20px; margin-bottom:50px;margin-left:100px;">
+<h3  class="title"  id="entreprise">Par Entreprise:</h3>
+
+</section>
+
+<hr/>
+
+<section style="margin-top:20px; margin-bottom:50px;margin-left:100px;">
+      <div id="city_1" class="clearfix">
+	 <h3  class="title"  id="region">Par Region:</h3>
+	
+			 <ul class="orange">
+			 {% for region in regions|slice(0,8) %}	
+			 <li>
+			 <a href="{{ path('region_view', {'id': region.id}) }}">{{region.name}}</a>
+			 </li>
+			 {% endfor %}				 
+			 </ul>
+			 <ul class="orange">
+			 
+			 {% for region in regions|slice(8,16) %}	
+			 <li>
+			 <a href="{{ path('region_view', {'id': region.id}) }}">{{region.name}}</a>
+			 </li>
+			 {% endfor %}	
+			 
+			 </ul>			 
+			 
+	     </div>
+</section>
+
+<hr/>
+
+<section style="margin-top:20px; margin-bottom:50px;">
+<div id="city_1" class="clearfix">
+<h2  id="fonction">Par fonction ou industrie:</h2>
+
+<ul class="blue">
+			 {% for cat in categories|slice(0,8) %}
+			 <li>
+			 <a href="{{ path('category_view', {'id': cat.id}) }}" title="{{ cat.name }}">{{ cat.name }}</a>
+			 </li>
+			 {% endfor %} 			 
+			 </ul>
+			 <ul class="blue">			  
+			  {% for cat in categories|slice(8,8) %}
+			 <li>
+			 <a href="{{ path('category_view', {'id': cat.id}) }}" title="{{ cat.name }}">{{ cat.name }}</a>
+			 </li>
+			 {% endfor %} 				       			 
+			 </ul>    
+
+</div>
+</section>
+
+</div>
+</div>
+
+{% endblock %}

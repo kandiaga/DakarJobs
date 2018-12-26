@@ -1,0 +1,38 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "JobDetails" %}
+{% block content %}
+
+<div class="banner_1">
+	{{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+    <div class="single">  
+	   <div class="col-md-9 single_right">	      
+          <div class="candidates-item">
+          	 <h5>Les articles sur l'emploi</h5>	
+            {% for blog in blogList|slice(0,7) %}	           
+		   <div class="candidate_1">
+		    <div class="thumb"><img src="{{ asset('bundles/home/images/') }}{{blog.img}}" class="img-responsive" alt="{{blog.title}}"/></div>
+             <div class="thumb_desc">
+			   <h6 class="title"><a href="{{ path('job_blogpost', {'idpost': blog.id}) }}">{{blog.title}}</a></h6>
+			   <span class="meta">{{ blog.date|date('d/m/Y') }}</span>
+               <div class="candidate_but">				
+               </div>
+			   <p class="sm_1">
+			   {{blog.content[:120] ~ '...'}}
+				<a href="{{ path('job_blogpost',{'idpost': blog.id}) }}">Lire la suite</a>
+			   </p>
+			</div>
+			<div class="clearfix"></div>	
+		   </div>		   
+		   {% endfor %}
+		</div>
+       </div>
+       <div class="col-md-3">
+	   	  <h2>Votre Pub ici</h2>
+   
+       </div>
+       <div class="clearfix"> </div>
+    </div>
+</div>   
+{% endblock %}

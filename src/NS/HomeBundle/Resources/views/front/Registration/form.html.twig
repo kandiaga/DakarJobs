@@ -1,0 +1,57 @@
+{# src/SeneMarket/SeneMarketSandagaBundle/Resources/views/Advert/form.html.twig #}
+
+<h3>Formulaire d'annonce</h3>
+
+{# On laisse vide la vue pour l'instant, on la comblera plus tard
+   lorsqu'on saura afficher un formulaire. #}
+<div class="well">
+  Ici se trouvera le formulaire.
+
+
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_label(form.title, 'Title:') }}
+        {{ form_errors(form.title) }}
+        {{ form_widget(form.title) }}
+    </div>
+	
+	
+	
+
+    <div>
+        {{ form_label(form.author , 'Author:') }}
+        {{ form_errors(form.author) }}
+        {{ form_widget(form.author) }}
+    </div>
+
+	<div>
+        {{ form_label(form.content , 'Content:') }}
+        {{ form_errors(form.content) }}
+        {{ form_widget(form.content) }}
+    </div class="form-group row">
+	
+	<div>
+	
+        {{ form_label(form.contenu , 'Contenu:') }}
+        {{ form_errors(form.contenu ) }}
+        {{ form_widget(form.contenu) }}
+		<textarea class="tinymce">...</textarea>
+		
+    </div>
+	
+	
+	
+    <div>
+        {{ form_widget(form.save) }}
+    </div>
+
+{{ form_end(form) }}
+
+</div>
+  {{ tinymce_init({'use_callback_tinymce_init': true, 'theme': {'simple': {'menubar': false}}}) }}
+
+  
+ 

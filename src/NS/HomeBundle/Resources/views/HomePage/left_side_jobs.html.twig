@@ -1,0 +1,15 @@
+<h3>Offres Récents</h3>
+<ul class="list_1">
+  {% for job in recent_jobs|slice(0,7) %}
+    <li>
+      <a href="{{ path('job_view', {'id': job.id}) }}">
+        {{ job.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<button  class="btn default">
+<a href="{{ path('job_view', {'id': 0}) }}">
+Voir tous les Offres	
+</a>
+</button>	

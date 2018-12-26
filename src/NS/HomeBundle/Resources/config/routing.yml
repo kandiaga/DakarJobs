@@ -1,0 +1,116 @@
+home_homepage:
+    pattern:  /home
+    defaults: { _controller: HomeBundle:HomePage:index }	
+home_contactpage:
+    pattern:  /contact
+    defaults: { _controller: HomeBundle:front/Contact:index }
+home_registrationpage:
+    pattern:  /register
+    defaults: { _controller: HomeBundle:front/Registration:index }
+home_loginpage:
+    pattern:  /login
+    defaults: { _controller: HomeBundle:front/Login:index }	
+customer_view: 
+   pattern:  /register/{id}
+   defaults: { _controller: HomeBundle:front/Registration:view } 
+   requirements:
+       id: \d+
+customer_add:
+   pattern:  /add
+   defaults: { _controller: HomeBundle:front/Registration:add}
+   requirements:
+      _method:  GET|POST
+customer_edit:
+   pattern:  /edit/{id}
+   defaults: { _controller: HomeBundle:front/Registration:edit} 
+   requirements:
+       id: \d+
+customer_delete:
+   pattern:  /delete/{id}
+   defaults: { _controller: HomeBundle:front/Registration:delete} 
+   requirements:
+       id: \d+	
+job_myaccount:
+    pattern:  /myaccount
+    defaults: { _controller: HomeBundle:front/MyAccount:index }	   
+home_jobspage:
+    pattern:  /jobs/{page}
+    defaults: { _controller: HomeBundle:front/Job:index }	
+job_view: 
+   pattern:  /job/{id}
+   defaults: { _controller: HomeBundle:front/Job:view } 
+   requirements:
+       id: \d+
+job_add:
+   pattern:  /job/add
+   defaults: { _controller: HomeBundle:front/Job:add}
+   requirements:
+      _method:  GET|POST
+job_edit:
+   pattern: /job/edit/{id}
+   defaults: { _controller: HomeBundle:front/Job:edit} 
+   requirements:
+       id: \d+
+job_delete:
+   pattern:  /delete/{id}
+   defaults: { _controller: HomeBundle:front/Job:delete} 
+   requirements:
+       id: \d+	
+category_view: 
+   pattern:  /category/{id}
+   defaults: { _controller: HomeBundle:front/Category:categoryJobs } 
+   requirements:
+       id: \d+	
+region_view: 
+   pattern:  /region/{id}
+   defaults: { _controller: HomeBundle:front/Region:regionJobs } 
+   requirements:
+       id: \d+	 	   
+job_admin:
+    pattern:  /adminJBoard
+    defaults: { _controller: HomeBundle:admin/AdminDashboard:index }	 	   
+job_admin_blogpost_category:
+    pattern:  /adminJBoard/AdminBlogPostCategory
+    defaults: { _controller: HomeBundle:admin/AdminBlogPostCategory:index }	
+job_admin_blogpost:
+    pattern:  /adminJBoard/AdminBlogPost
+    defaults: { _controller: HomeBundle:admin/AdminBlogPost:index }	
+job_blogpost:
+    pattern: /blog/{idpost}
+    defaults: { _controller: HomeBundle:front/BlogPost:view }
+job_blogpost_all:
+    pattern: /blog
+    defaults: { _controller: HomeBundle:front/BlogPost:index }
+job_about:
+    pattern: /about
+    defaults: { _controller: HomeBundle:HomePage:about }
+job_terms:
+    pattern: /conditions-legales
+    defaults: { _controller: HomeBundle:HomePage:terms }
+job_features:
+    pattern: /features
+    defaults: { _controller: HomeBundle:HomePage:features }	
+job_resume:
+    pattern:  /resume
+    defaults: { _controller: HomeBundle:front/Resume:index }
+job_resume_add:
+    pattern:  /resume/create
+    defaults: { _controller: HomeBundle:front/Resume:add }		
+job_resume_view: 
+   pattern:  /resume/view/{id}
+   defaults: { _controller: HomeBundle:front/Resume:view } 
+   requirements:
+       id: \d+	
+job_resume_delete:
+   pattern:  /resume/delete/{id}
+   defaults: { _controller: HomeBundle:front/Resume:delete} 
+   requirements:
+       id: \d+	
+job_resume_edit:
+   pattern:  /resume/edit/{id}
+   defaults: { _controller: HomeBundle:front/Resume:edit} 
+   requirements:
+       id: \d+		   
+job_search_all:
+    pattern:  /search_all
+    defaults: { _controller: HomeBundle:Jobsearch:index }		

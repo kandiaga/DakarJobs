@@ -1,0 +1,49 @@
+<h3>Offres par  Catégorie</h3>
+<ul class="list_2">
+{% for cat in left_categories|slice(0,7) %}
+    <li>
+      <a href="{{ path('category_view', {'id': cat.id}) }}">
+        {{ cat.name }}
+      </a>
+    </li>
+{% endfor %}		
+</ul>
+<button  class="btn default">
+<a href="{{ path('category_view', {'id': 0}) }}">
+Voir toutes les caregories	
+</a>
+</button>				 
+<div class="widget">
+	        <h3>Take The Seeking Poll!</h3>
+    	        <div class="widget-content"> 
+                 <div class="seeking-answer">
+			    	<span class="seeking-answer-group">
+		    			<span class="seeking-answer-input">
+		    			   <input class="seeking-radiobutton" type="radio">
+		    			</span>
+		    			<label for="" class="seeking-input-label">
+		    				<span class="seeking-answer-span">Frequently</span>
+		    			</label>
+		    		</span>
+			    	<span class="seeking-answer-group">
+		    			<span class="seeking-answer-input">
+		    			   <input class="seeking-radiobutton" type="radio">
+		    			</span>
+		    			<label for="" class="seeking-input-label">
+		    				<span class="seeking-answer-span">Interviewing</span>
+		    			</label>
+		    		</span>
+			        <span class="seeking-answer-group">
+		    			<span class="seeking-answer-input">
+		    			   <input class="seeking-radiobutton" type="radio">
+		    			</span>
+		    			<label for="" class="seeking-input-label">
+		    				<span class="seeking-answer-span">Leaving a familiar workplace</span>
+		    			</label>
+		    		</span>
+		    		<div class="seeking_vote">
+		    		  <a class="seeking-vote-button">Vote</a>
+		    		</div>
+			     </div>
+    	       </div>
+</div>			

@@ -1,0 +1,26 @@
+{% extends "HomeBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>{{ customer.firstname }}</h2>
+  <i>Par {{ customer.firstname }}, le {{ customer.created_date|date('d/m/Y') }}</i>
+  
+ 
+
+  <div class="well">
+    {{ customer.lastname }}
+  </div>
+
+  <p>
+
+
+
+{% endblock %}
+
+
+
+

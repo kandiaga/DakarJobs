@@ -1,0 +1,24 @@
+{# src/SeneMarket/SeneMarketSandagaBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends "SeneMarketSandagaBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("SeneMarketSandagaBundle:Advert:form.html.twig") }}
+
+  <p>
+    Vous editez une annonce deja existante, merci de ne pas changer
+    l'esprit generale de l'annonce deja publiee.
+  </p>
+
+  <p>    
+  </p>
+
+{% endblock %}
+

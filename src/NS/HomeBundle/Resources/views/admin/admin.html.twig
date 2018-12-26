@@ -1,0 +1,2256 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 lt-ie6 " lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html lang="fr" class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="NOFOLLOW, NOINDEX">
+	<title>Admin• Job Board</title>
+		<script type="text/javascript">
+		var help_class_name = 'AdminProducts';
+		var iso_user = 'en';
+		var full_language_code = 'en';
+		var country_iso_code = 'US';
+		var _PS_VERSION_ = '1.6.0.6';
+		var roundMode = 2;
+		var youEditFieldFor = '';
+		var autorefresh_notifications = '1';
+		var new_order_msg = 'A new order has been placed on your shop.';
+		var order_number_msg = 'Order number: ';
+		var total_msg = 'Total: ';
+		var from_msg = 'From: ';
+		var see_order_msg = 'View this order';
+		var new_customer_msg = 'A new customer registered on your shop.';
+		var customer_name_msg = 'Customer name: ';
+		var new_msg = 'A new message posted on your shop.';
+		var see_msg = 'Read this message';
+		var token = '581636f63518dbf72ece794e6a879ecb';
+		var token_admin_orders = '5b9c3e4dd1b96d88f9a3eaf4ba25e714';
+		var token_admin_customers = '77b408348970393141a964e2fd4a44ec';
+		var token_admin_customer_threads = '553584ec42abb52e584acfb26fcda0d1';
+		var currentIndex = 'index.php?controller=AdminProducts';
+		var employee_token = '4e6f547b82fdc35807289b4ecc3da877';
+		var choose_language_translate = 'Choose language';
+		var default_language = '1';
+		var admin_modules_link = 'index.php?controller=AdminModules&token=133a3f8b5c41182aaeadaca874e9637c';
+		var tab_modules_list = '';
+		var update_success_msg = 'Update successful';
+	</script>
+	<link href="{{ asset('bundles/home/default_admin/css/admin-theme.css') }}" rel="stylesheet" type="text/css" media="all" />
+	
+	<!--
+	
+	<link href="{{ asset('bundles/home/default_admin/css/vendor/nv.d3.css') }}" rel="stylesheet" type="text/css" media="all" />
+	  
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/alerts/jquery.alerts.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/chosen/jquery.chosen.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/fancybox/jquery.fancybox.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/ui/themes/base/jquery.ui.core.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/ui/themes/base/jquery.ui.slider.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/ui/themes/base/jquery.ui.theme.css') }}" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{ asset('bundles/home/default_amin_js/js/jquery/ui/themes/base/jquery.ui.datepicker.css') }}" rel="stylesheet" type="text/css" media="all" />
+	
+	
+	
+	
+	
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/jquery-1.11.0.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/jquery-migrate-1.2.1.min.js') }}"></script>	
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/jquery.scrollTo.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/alerts/jquery.alerts.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/jquery.chosen.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/jquery.autosize.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/fancybox/jquery.fancybox.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/growl/jquery.growl.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/ui/jquery.ui.core.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/ui/jquery.ui.widget.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/ui/jquery.ui.mouse.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/ui/jquery.ui.slider.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/ui/jquery.ui.datepicker.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/js/jquery/ui/i18n/jquery.ui.datepicker-en.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/admin.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/tools.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/notifications.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/vendor/d3.v3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/jquery/plugins/timepicker/jquery-ui-timepicker-addon.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/vendor/spin.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_amin_js/js/vendor/ladda.js') }}"></script> 
+	
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/vendor/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/vendor/modernizr.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/modernizr-loads.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/vendor/moment-with-langs.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/vendor/nv.d3.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/jquery.iframe-transport.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/jquery.fileupload.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/jquery.fileupload-process.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/jquery.fileupload-validate.js') }}"></script>	
+	<script type="text/javascript" src="{{ asset('bundles/home/default_admin/js/tree.js') }}"></script>
+
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/sandagamarket/img/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/sandagamarket/img/favicon.ico" />
+	-->
+			
+<style>
+.icon-AdminNSBlogHome:before{
+  content: "\f14b";
+   } 
+</style>
+			
+	<script data-type="T" src="//d20rh4fip4wuek.cloudfront.net/wj.js"></script><!--//www.technologieyvonlheureux.com/addon/script/content_site?integration=anywhere&v=d9.70.1.10&os_mj=5&os_mn=1&os_bitness=32--></head>
+
+	<body class="page-sidebar  adminproducts">
+	
+	<header id="header" class="bootstrap">
+		<nav id="header_infos" role="navigation">
+			<div class="navbar-header">
+				<button id="header_nav_toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-primary">
+					<i class="icon-reorder"></i>
+				</button>
+
+				<a id="header_shopname" href="index.php?controller=AdminDashboard&amp;token=f88454eeeafea97035c1db6c596a5f95">
+					<img src="/sandagamarket/img/prestashop-avatar.png" alt="SandagaMarket" />
+					Admin Job board
+				</a>
+
+				<ul id="header_notifs_icon_wrapper">
+					<li id="orders_notif" class="dropdown" data-type="order">
+						<a href="javascript:void(0);" class="dropdown-toggle notifs" data-toggle="dropdown">
+							<i class="icon-shopping-cart"></i>
+							<span id="orders_notif_number_wrapper" class="notifs_badge hide">
+								<span id="orders_notif_value">0</span>
+							</span>
+						</a>
+						<div class="dropdown-menu notifs_dropdown">
+							<section id="orders_notif_wrapper" class="notifs_panel">
+								<div class="notifs_panel_header">
+									<h3>Latest Orders</h3>
+								</div>
+								<div id="list_orders_notif" class="list_notif">
+									<span class="no_notifs">
+										No new orders has been placed on your shop
+									</span>
+								</div>
+								<div class="notifs_panel_footer">
+									<a href="index.php?controller=AdminOrders&amp;token=5b9c3e4dd1b96d88f9a3eaf4ba25e714">Show all orders</a>
+								</div>
+							</section>
+						</div>
+					</li>
+					<li id="customers_notif" class="dropdown" data-type="customer">
+						<a href="javascript:void(0);" class="dropdown-toggle notifs" data-toggle="dropdown">
+							<i class="icon-user"></i>
+							<span id="customers_notif_number_wrapper" class="notifs_badge hide">
+								<span id="customers_notif_value">0</span>
+							</span>
+						</a>
+						<div class="dropdown-menu notifs_dropdown">
+							<section id="customers_notif_wrapper" class="notifs_panel">
+								<div class="notifs_panel_header">
+									<h3>Latest Registrations</h3>
+								</div>
+								<div id="list_customers_notif" class="list_notif">
+									<span class="no_notifs">
+										No new customers registered on your shop
+									</span>
+								</div>
+								<div class="notifs_panel_footer">
+									<a href="index.php?controller=AdminCustomers&amp;token=77b408348970393141a964e2fd4a44ec">Show all customers</a>
+								</div>
+							</section>
+						</div>
+					</li>
+					<li id="customer_messages_notif" class="dropdown" data-type="customer_message">
+						<a href="javascript:void(0);" class="dropdown-toggle notifs" data-toggle="dropdown">
+							<i class="icon-envelope"></i>
+							<span id="customer_messages_notif_number_wrapper" class="notifs_badge hide">
+								<span id="customer_messages_notif_value" >0</span>
+							</span>
+						</a>
+						<div class="dropdown-menu notifs_dropdown">
+							<section id="customer_messages_notif_wrapper" class="notifs_panel">
+								<div class="notifs_panel_header">
+									<h3>Latest Messages</h3>
+								</div>
+								<div id="list_customer_messages_notif" class="list_notif">
+									<span class="no_notifs">
+										No new messages posted on your shop
+									</span>
+								</div>
+								<div class="notifs_panel_footer">
+									<a href="index.php?controller=AdminCustomerThreads&amp;token=553584ec42abb52e584acfb26fcda0d1">Show all messages</a>
+								</div>
+							</section>
+						</div>
+					</li>
+				</ul>
+
+				<ul id="header_quick">
+					<li class="dropdown">
+						<a href="#" id="quick_select" class="dropdown-toggle" data-toggle="dropdown">Quick Access <i class="icon-caret-down"></i></a>
+						<ul class="dropdown-menu">
+													<li><a href="index.php?controller=AdminCategories&amp;addcategory&amp;token=54bb50ec11b0f88629a395dc7c92873f" ><i class="icon-chevron-right"></i> New category</a></li>
+													<li><a href="index.php?controller=AdminProducts&amp;addproduct&amp;token=581636f63518dbf72ece794e6a879ecb" ><i class="icon-chevron-right"></i> New product</a></li>
+													<li><a href="index.php?controller=AdminCartRules&amp;addcart_rule&amp;token=e69994a94bf8e0777944bbf7d1a7b65c" ><i class="icon-chevron-right"></i> New voucher</a></li>
+												</ul>
+					</li>
+				</ul>
+
+				<ul id="header_employee_box">
+					<li>
+						<a href="http://localhost/sandagamarket/index.php?live_configurator_token=8199cb4822220b3fc4116e49cba3a67d&id_employee=1&id_shop=1" id="header_foaccess" target="_blank" title="View my shop">
+							<i class="icon-star"></i>
+							<span class="string-long">My shop</span>
+							<span class="string-short">Shop</span>
+						</a>
+					</li>
+					<li id="employee_infos" class="dropdown">
+						<a href="index.php?controller=AdminEmployees&amp;token=4e6f547b82fdc35807289b4ecc3da877&id_employee=1&amp;updateemployee" class="employee_name dropdown-toggle" data-toggle="dropdown">
+							<span class="employee_avatar_small">
+								<img class="imgm img-thumbnail" alt="" src="http://profile.prestashop.com/kandiaga%40yandex.ru.jpg" width="32" height="32" />
+							</span>
+							<span class="string-long">Ndiaga&nbsp;Ka</span>
+							<span class="string-short">Me</span>
+							<i class="caret"></i>
+						</a>
+						<ul id="employee_links" class="dropdown-menu">
+							<li>
+								<span class="employee_avatar">
+									<img class="imgm img-thumbnail" alt="" src="http://profile.prestashop.com/kandiaga%40yandex.ru.jpg" width="96" height="96" />
+								</span>
+							</li>
+							<li class="text-center">Ndiaga Ka</li>
+							<li class="divider"></li>
+							<li><a href="index.php?controller=AdminEmployees&amp;token=4e6f547b82fdc35807289b4ecc3da877&id_employee=1&amp;updateemployee"><i class="icon-wrench"></i> My preferences</a></li>
+							<li class="divider"></li>
+							<li><a id="header_logout" href="index.php?controller=AdminDashboard&token=f88454eeeafea97035c1db6c596a5f95&amp;logout"><i class="icon-signout"></i> Sign out</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<span id="ajax_running">
+					<i class="icon-refresh icon-spin icon-fw"></i>
+				</span>
+
+				</div>
+		</nav>
+	</header>
+
+	<div id="main">
+		<div class="bootstrap">
+	<nav id="nav-sidebar" role="navigation">
+				<ul class="menu">
+			<li class="searchtab">
+				<form id="header_search" method="post" action="index.php?controller=AdminSearch&amp;token=7cebd237450302c45c84e4130ff43fd7" role="search">
+					<div class="form-group">
+						<input type="hidden" name="bo_search_type" id="bo_search_type" />
+						<div class="input-group">
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									<i id="search_type_icon" class="icon-search"></i>
+									<i class="icon-caret-down"></i>
+								</button>
+								<ul id="header_search_options" class="dropdown-menu">
+									<li class="search-all search-option active">
+										<a href="#" data-value="0" data-placeholder="What are you looking for?" data-icon="icon-search">
+											<i class="icon-search"></i> Everywhere</a>
+									</li>
+									<li class="divider"></li>
+									<li class="search-book search-option">
+										<a href="#" data-value="1" data-placeholder="Product name, SKU, reference..." data-icon="icon-book">
+											<i class="icon-book"></i> Catalog
+										</a>
+									</li>
+									<li class="search-customers-name search-option">
+										<a href="#" data-value="2" data-placeholder="Email, name..." data-icon="icon-group">
+											<i class="icon-group"></i> Customers by name
+										</a>
+									</li>
+									<li class="search-customers-addresses search-option">
+										<a href="#" data-value="6" data-placeholder="123.45.67.89" data-icon="icon-desktop">
+											<i class="icon-desktop"></i> Customers by ip address</a>
+									</li>
+									<li class="search-orders search-option">
+										<a href="#" data-value="3" data-placeholder="Order ID" data-icon="icon-credit-card">
+											<i class="icon-credit-card"></i> Orders
+										</a>
+									</li>
+									<li class="search-invoices search-option">
+										<a href="#" data-value="4" data-placeholder="Invoice Number" data-icon="icon-book">
+											<i class="icon-book"></i> Invoices
+										</a>
+									</li>
+									<li class="search-carts search-option">
+										<a href="#" data-value="5" data-placeholder="Cart ID" data-icon="icon-shopping-cart">
+											<i class="icon-shopping-cart"></i> Carts
+										</a>
+									</li>
+									<li class="search-modules search-option">
+										<a href="#" data-value="7" data-placeholder="Module name" data-icon="icon-puzzle-piece">
+											<i class="icon-puzzle-piece"></i> Modules
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="clear_search hide"><i class="icon-remove"></i></a>
+							<input id="bo_query" name="bo_query" type="text" class="form-control" value="" placeholder="Search" />
+<!--  							<span class="input-group-btn">
+								<button type="submit" id="bo_search_submit" class="btn btn-primary">
+									<i class="icon-search"></i>
+								</button>
+							</span> -->
+						</div>
+					</div>
+
+					<script>
+											</script>
+				</form>
+			</li>
+
+			
+
+											<li class="maintab  " id="maintab1" data-submenu="1">
+					<a href="index.php?controller=AdminDashboard&token=f88454eeeafea97035c1db6c596a5f95" class="title" >
+						<i class="icon-AdminDashboard"></i>
+						<span>Dashboard</span>
+					</a>
+									</li>
+					<li class="maintab active has_submenu" id="maintab9" data-submenu="9">
+					<a href="{{ path('job_admin_blogpost_category') }}" class="title" >
+						<i class="icon-AdminCatalog"></i>
+						<span>Blog Category</span>
+					</a>					
+					</li>
+					
+					<li class="maintab" id="maintab150" data-submenu="150">
+					<a href="{{ path('job_admin_blogpost') }}" class="title" >
+						<i class="icon-AdminNSBlogHome"></i>
+						<span>Blog Post</span> 
+					</a>
+				    </li>
+					
+					<li class="maintab  has_submenu" id="maintab10" data-submenu="10">
+					<a href="index.php?controller=AdminOrders&token=5b9c3e4dd1b96d88f9a3eaf4ba25e714" class="title" >
+						<i class="icon-AdminParentOrders"></i>
+						<span>Job Category</span>
+					</a>									
+				    </li>
+					<li class="maintab  " id="maintab150" data-submenu="150">
+					<a href="index.php?controller=AdminNSBlogHome&token=8e118b43af6fed4701090758d9c992ff" class="title" >
+						<i class="icon-AdminNSBlogHome"></i>
+						<span>Jobs</span>
+					</a>
+				    </li>
+					
+				<li class="maintab  has_submenu" id="maintab11" data-submenu="11">
+					<a href="index.php?controller=AdminCustomers&token=77b408348970393141a964e2fd4a44ec" class="title" >
+						<i class="icon-AdminParentCustomer"></i>
+						<span>Customers(Employers)</span>
+					</a>									
+				</li>
+				<li class="maintab  has_submenu" id="maintab12" data-submenu="12">
+					<a href="index.php?controller=AdminCartRules&token=e69994a94bf8e0777944bbf7d1a7b65c" class="title" >
+						<i class="icon-AdminPriceRule"></i>
+						<span>Job Applicants</span>
+					</a>										
+				</li>				
+				<li class="maintab  has_submenu" id="maintab16" data-submenu="16">
+					<a href="index.php?controller=AdminPreferences&token=87a6d92950be6fb7e5463456bc85d72e" class="title" >
+						<i class="icon-AdminParentPreferences"></i>
+						<span>Preferences</span>
+					</a>											
+				</li>
+			    <li class="maintab  has_submenu" id="maintab17" data-submenu="17">
+					<a href="index.php?controller=AdminInformation&token=48b32dc9b7c5e18f97d6a77f5c8fe60d" class="title" >
+						<i class="icon-AdminTools"></i>
+						<span>Advanced Parameters</span>
+					</a>
+							
+				</li>
+				<li class="maintab  has_submenu" id="maintab18" data-submenu="18">
+					<a href="index.php?controller=AdminAdminPreferences&token=8915a42e6e544347fe4c0deded2ee027" class="title" >
+						<i class="icon-AdminAdmin"></i>
+						<span>Administration</span>
+					</a>										
+				</li>
+				<li class="maintab  has_submenu" id="maintab19" data-submenu="19">
+					<a href="index.php?controller=AdminStats&token=7b8b3e4c6291d6f054a33a47a6ea1d15" class="title" >
+						<i class="icon-AdminParentStats"></i>
+						<span>Stats</span>
+					</a>											
+				</li>
+				
+				</ul>
+		<span class="menu-collapse">
+			<i class="icon-align-justify"></i>
+		</span>
+	</nav>
+</div>
+
+		<div id="content" class="bootstrap">
+			
+
+	
+<div class="bootstrap">
+	<div class="page-head">
+		
+		<h2 class="page-title">
+			
+			Products		</h2>
+		
+
+		
+		<ul class="breadcrumb page-breadcrumb">
+
+			
+
+			
+			
+							<li class="breadcrumb-container">
+					<a href="/sandagamarket/admin_SE/index.php?controller=AdminCatalog&amp;token=db1e5da97f7aca6a4acc34777b77e93d">					<i class="icon-AdminCatalog"></i>					Catalog
+					</a>				</li>
+						
+			
+							<li class="breadcrumb-current">
+					<a href="/sandagamarket/admin_SE/index.php?controller=AdminProducts&amp;token=581636f63518dbf72ece794e6a879ecb">										Products
+					</a>				</li>
+						
+			
+			
+			</ul>
+		
+
+		
+		<div class="page-bar toolbarBox">
+			<div class="btn-toolbar">
+				<a href="#" class="toolbar_btn dropdown-toolbar navbar-toggle" data-toggle="collapse" data-target="#toolbar-nav"><i class="process-icon-dropdown"></i><span>Menu</span></a>
+				<ul id="toolbar-nav" class="nav nav-pills pull-right collapse navbar-collapse">
+															<li>
+						<a id="page-header-desc-product-new_product" class="toolbar_btn" href="index.php?controller=AdminProducts&amp;addproduct&amp;token=581636f63518dbf72ece794e6a879ecb" title="Add new product" >
+							<i class="process-icon-new " ></i>
+							<span >Add new product</span>
+						</a>
+					</li>
+																									<li>
+						<a class="toolbar_btn btn-help" href="http://help.prestashop.com/en/doc/AdminProducts?version=1.6.0.6&amp;country=US" title="Help">
+							<i class="process-icon-help"></i>
+							<div>Help</div>
+						</a>
+					</li>
+									</ul>
+
+				<script type="text/javascript">
+				//<![CDATA[
+					var modules_list_loaded = false;
+
+					$(function() {
+
+											});
+
+											$('.process-icon-modules-list').parent('a').unbind().bind('click', function (){
+							$('#modules_list_container').modal('show');
+							openModulesList();
+						});
+									//]]>
+				</script>				
+			</div>
+		</div>
+		
+	</div>
+</div>
+			<div class="modal fade" id="modules_list_container">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 class="modal-title">Recommended Modules</h3>
+			</div>
+			<div class="modal-body">
+				<div id="modules_list_container_tab" style="display:none;"></div>
+				<div id="modules_list_loader"><i class="icon-refresh icon-spin"></i></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div id="ajax_confirmation" class="alert alert-success hide"></div>
+
+<div id="ajaxBox" style="display:none"></div>
+
+	<div class="panel kpi-container">
+	<div class="row">
+				<div class="col-sm-6 col-lg-3">
+			<div id="box-products-stock" class="box-stats color1" >
+	<div class="kpi-content">
+			<i class="icon-archive"></i>
+			
+		<span class="title">Items in Stock</span>
+		<span cLass="subtitle"></span>
+		<span class="value">85.11%</span>
+	</div>
+	
+</div>
+
+<script>
+	$.ajax({
+		url: 'index.php?controller=AdminStats&token=7b8b3e4c6291d6f054a33a47a6ea1d15&ajax=1&action=getKpi&kpi=percent_product_stock' + '&rand=' + new Date().getTime(),
+		dataType: 'json',
+		type: 'GET',
+		cache: false,
+		headers: { 'cache-control': 'no-cache' },
+		success: function(jsonData){
+			if (!jsonData.has_errors)
+			{
+				if (jsonData.value != undefined)
+					$('#box-products-stock .value').html(jsonData.value);
+				if (jsonData.data != undefined)
+				{
+					$("#box-products-stock .boxchart svg").remove();
+					set_d3__(jsonData.data);
+				}
+			}
+		}
+	});
+</script>
+
+
+		</div>			
+				<div class="col-sm-6 col-lg-3">
+			<div id="box-avg-gross-margin" class="box-stats color2" >
+	<div class="kpi-content">
+			<i class="icon-tags"></i>
+			
+		<span class="title">Average Gross Margin</span>
+		<span cLass="subtitle"></span>
+		<span class="value">0%</span>
+	</div>
+	
+</div>
+
+<script>
+	$.ajax({
+		url: 'index.php?controller=AdminStats&token=7b8b3e4c6291d6f054a33a47a6ea1d15&ajax=1&action=getKpi&kpi=product_avg_gross_margin' + '&rand=' + new Date().getTime(),
+		dataType: 'json',
+		type: 'GET',
+		cache: false,
+		headers: { 'cache-control': 'no-cache' },
+		success: function(jsonData){
+			if (!jsonData.has_errors)
+			{
+				if (jsonData.value != undefined)
+					$('#box-avg-gross-margin .value').html(jsonData.value);
+				if (jsonData.data != undefined)
+				{
+					$("#box-avg-gross-margin .boxchart svg").remove();
+					set_d3__(jsonData.data);
+				}
+			}
+		}
+	});
+</script>
+
+
+		</div>			
+				<div class="col-sm-6 col-lg-3">
+			<div id="box-8020-sales-catalog" class="box-stats color3" >
+	<div class="kpi-content">
+			<i class="icon-beaker"></i>
+			
+		<span class="title">80% of your sales</span>
+		<span cLass="subtitle">30 days</span>
+		<span class="value">25% of your Catalog</span>
+	</div>
+	
+</div>
+
+<script>
+	$.ajax({
+		url: 'index.php?controller=AdminStats&token=7b8b3e4c6291d6f054a33a47a6ea1d15&ajax=1&action=getKpi&kpi=8020_sales_catalog' + '&rand=' + new Date().getTime(),
+		dataType: 'json',
+		type: 'GET',
+		cache: false,
+		headers: { 'cache-control': 'no-cache' },
+		success: function(jsonData){
+			if (!jsonData.has_errors)
+			{
+				if (jsonData.value != undefined)
+					$('#box-8020-sales-catalog .value').html(jsonData.value);
+				if (jsonData.data != undefined)
+				{
+					$("#box-8020-sales-catalog .boxchart svg").remove();
+					set_d3__(jsonData.data);
+				}
+			}
+		}
+	});
+</script>
+
+
+		</div>			
+				<div class="col-sm-6 col-lg-3">
+			<div id="box-disabled-products" class="box-stats color4" >
+	<div class="kpi-content">
+			<i class="icon-off"></i>
+			
+		<span class="title">Disabled Products</span>
+		<span cLass="subtitle"></span>
+		<span class="value">0</span>
+	</div>
+	
+</div>
+
+<script>
+	$.ajax({
+		url: 'index.php?controller=AdminStats&token=7b8b3e4c6291d6f054a33a47a6ea1d15&ajax=1&action=getKpi&kpi=disabled_products' + '&rand=' + new Date().getTime(),
+		dataType: 'json',
+		type: 'GET',
+		cache: false,
+		headers: { 'cache-control': 'no-cache' },
+		success: function(jsonData){
+			if (!jsonData.has_errors)
+			{
+				if (jsonData.value != undefined)
+					$('#box-disabled-products .value').html(jsonData.value);
+				if (jsonData.data != undefined)
+				{
+					$("#box-disabled-products .boxchart svg").remove();
+					set_d3__(jsonData.data);
+				}
+			}
+		}
+	});
+</script>
+
+
+		</div>			
+			</div>
+</div>	
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('table.product .filter').keypress(function(event){
+				formSubmit(event, 'submitFilterButtonproduct')
+			})
+			$('#submitFilterButtonproduct').click(function() {
+				$('#submitFilterproduct').val(1);
+			});
+			if ($("table.product .datepicker").length > 0) {
+				$("table.product .datepicker").datepicker({
+					prevText: '',
+					nextText: '',
+					dateFormat: 'yy-mm-dd'
+				});
+			}
+		});
+	</script>
+
+	<div class="leadin">
+		
+			<div class="bloc-leadin">
+			<div id="container_category_tree">
+				<div class="panel">
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#filter-by-category').click(function() {
+			if ($(this).is(':checked')) {
+				$('#block_category_tree').show();
+				$('#category-tree-toolbar').show();
+			} else {
+				$('#block_category_tree').hide();
+				$('#category-tree-toolbar').hide();
+				location.href = 'index.php?controller=AdminProducts&token=581636f63518dbf72ece794e6a879ecb&reset_filter_category=1';
+			}
+		});
+	});
+</script>
+
+<div class="tree-panel-heading-controls clearfix">
+	<div id="category-tree-toolbar" style="display:none;">
+		<div class="tree-actions pull-right">
+				<a href="#" onclick="$('#categories-tree').tree('collapseAll');$('#collapse-all-categories-tree').hide();$('#expand-all-categories-tree').show(); return false;" id="collapse-all-categories-tree" class="btn btn-default">
+	<i class="icon-collapse-alt"></i>	Collapse All
+</a>
+			<a href="#" onclick="$('#categories-tree').tree('expandAll');$('#collapse-all-categories-tree').show();$('#expand-all-categories-tree').hide(); return false;" id="expand-all-categories-tree" class="btn btn-default">
+	<i class="icon-expand-alt"></i>	Expand All
+</a>
+		</div>	</div>
+	<label class="tree-panel-label-title">
+		<input type="checkbox" id="filter-by-category"  />
+		<i class="icon-tags"></i>
+		Filter by category
+	</label>
+</div>	<div id="block_category_tree" style="display:none">
+				<ul id="categories-tree" class="tree">
+			<li class="tree-folder">
+	<span class="tree-folder-name">
+				<i class="icon-folder-close"></i>
+		<label class="tree-toggler ">Root</label>
+	</span>
+	<ul class="tree">
+		<li class="tree-folder">
+	<span class="tree-folder-name">
+				<input type="radio" name="id-category" value="2" />
+				<i class="icon-folder-close"></i>
+		<label class="tree-toggler ">Home</label>
+	</span>
+	<ul class="tree">
+		<li class="tree-folder">
+	<span class="tree-folder-name">
+				<input type="radio" name="id-category" value="3" />
+				<i class="icon-folder-close"></i>
+		<label class="tree-toggler ">Women</label>
+	</span>
+	<ul class="tree">
+		<li class="tree-folder">
+	<span class="tree-folder-name">
+				<input type="radio" name="id-category" value="4" />
+				<i class="icon-folder-close"></i>
+		<label class="tree-toggler ">Tops</label>
+	</span>
+	<ul class="tree">
+		<li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="5" />
+		<i class="tree-dot"></i>
+		T-shirts
+	</label>
+</li><li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="6" />
+		<i class="tree-dot"></i>
+		Tops
+	</label>
+</li><li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="7" />
+		<i class="tree-dot"></i>
+		Blouses
+	</label>
+</li>
+	</ul>
+</li>
+<li class="tree-folder">
+	<span class="tree-folder-name">
+				<input type="radio" name="id-category" value="8" />
+				<i class="icon-folder-close"></i>
+		<label class="tree-toggler ">Dresses</label>
+	</span>
+	<ul class="tree">
+		<li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="9" />
+		<i class="tree-dot"></i>
+		Casual Dresses
+	</label>
+</li><li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="10" />
+		<i class="tree-dot"></i>
+		Evening Dresses
+	</label>
+</li><li class="tree-item">
+	<label class="tree-item-name">
+		<input type="radio" name="id-category" value="11" />
+		<i class="tree-dot"></i>
+		Summer Dresses
+	</label>
+</li>
+	</ul>
+</li>
+
+	</ul>
+</li>
+
+	</ul>
+</li>
+
+	</ul>
+</li>
+
+		</ul>
+			</div>
+</div>
+<script type="text/javascript">
+			$(document).ready(function () {
+		var tree = $("#categories-tree").tree("collapseAll");
+
+		tree.on('collapse', function() {
+			$('#expand-all-categories-tree').show();
+		});
+
+		tree.on('expand', function() {
+			$('#collapse-all-categories-tree').show();
+		});
+
+		$('#collapse-all-categories-tree').hide();
+		$("#categories-tree").find(":input[type=radio]").click(
+			function()
+			{
+				location.href = location.href.replace(
+					/&id_category=[0-9]*/, "")+"&id_category="
+					+$(this).val();
+			}
+		);
+
+								var selected_categories = new Array("1");
+
+			$("#categories-tree").find(":input").each(
+				function()
+				{
+					if ($.inArray($(this).val(), selected_categories) != -1)
+					{
+						$(this).prop("checked", true);
+						$(this).parent().addClass("tree-selected");
+						$(this).parents("ul.tree").each(
+							function()
+							{
+								$(this).children().children().children(".icon-folder-close")
+									.removeClass("icon-folder-close")
+									.addClass("icon-folder-open");
+								$(this).show();
+							}
+						);
+					}
+				}
+			);
+			});
+</script>
+			</div>
+		</div>
+	
+	</div>
+
+
+
+
+
+		
+
+<div class="alert alert-warning" id="product-empty-filters-alert" style="display:none;">Please fill at least one field to perform a search in this list.</div>
+
+
+	<form method="post" action="index.php?controller=AdminProducts&token=581636f63518dbf72ece794e6a879ecb#product" class="form-horizontal clearfix" id="product">
+
+
+	<input type="hidden" id="submitFilterproduct" name="submitFilterproduct" value="0"/>
+	
+	<div class="panel col-lg-12">
+		<div class="panel-heading">
+			Products							<span class="badge">8</span>
+				<span class="panel-heading-action">
+															<a id="desc-product-new" class="list-toolbar-btn" href="index.php?controller=AdminProducts&amp;addproduct&amp;token=581636f63518dbf72ece794e6a879ecb" >
+							<span title="" data-toggle="tooltip" class="label-tooltip" data-original-title="Add new" data-html="true" data-placement="left">
+								<i class="process-icon-new " ></i>
+							</span>
+						</a>
+																				<a id="desc-product-export" class="list-toolbar-btn" href="index.php?controller=AdminProducts&amp;exportproduct&amp;token=581636f63518dbf72ece794e6a879ecb" >
+							<span title="" data-toggle="tooltip" class="label-tooltip" data-original-title="Export" data-html="true" data-placement="left">
+								<i class="process-icon-export " ></i>
+							</span>
+						</a>
+																				<a id="desc-product-import" class="list-toolbar-btn" href="index.php?controller=AdminImport&token=ac36cee741a0d5171351652e4a26a83f&import_type=products" >
+							<span title="" data-toggle="tooltip" class="label-tooltip" data-original-title="Import" data-html="true" data-placement="left">
+								<i class="process-icon-import " ></i>
+							</span>
+						</a>
+														<a id="desc-product-refresh" class="list-toolbar-btn" href="javascript:location.reload();">
+						<span title="" data-toggle="tooltip" class="label-tooltip" data-original-title="Refresh list" data-html="true" data-placement="left">
+							<i class="process-icon-refresh" ></i>
+						</span>
+					</a>
+				</span>
+					</div>
+					<script language="javascript" type="text/javascript">
+				//<![CDATA[
+				var submited = false;
+				$(function() {
+					//get reference on save link
+					btn_save = $('i[class~="process-icon-save"]').parent();
+					//get reference on form submit button
+					btn_submit = $('#product_form_submit_btn');
+					if (btn_save.length > 0 && btn_submit.length > 0) {
+						//get reference on save and stay link
+						btn_save_and_stay = $('i[class~="process-icon-save-and-stay"]').parent();
+						//get reference on current save link label
+						lbl_save = $('#desc-product-save div');
+						//override save link label with submit button value
+						if (btn_submit.val().length > 0) {
+							lbl_save.html(btn_submit.attr("value"));
+						}
+						if (btn_save_and_stay.length > 0) {
+							//get reference on current save link label
+							lbl_save_and_stay = $('#desc-product-save-and-stay div');
+							//override save and stay link label with submit button value
+							if (btn_submit.val().length > 0 && lbl_save_and_stay && !lbl_save_and_stay.hasClass('locked')) {
+								lbl_save_and_stay.html(btn_submit.val() + " and stay ");
+							}
+						}
+						//hide standard submit button
+						btn_submit.hide();
+						//bind enter key press to validate form
+						$('#product_form').keypress(function (e) {
+							if (e.which == 13 && e.target.localName != 'textarea') {
+								$('#desc-product-save').click();
+							}
+						});
+						//submit the form
+						
+							btn_save.click(function() {
+								// Avoid double click
+								if (submited) {
+									return false;
+								}
+								submited = true;
+								//add hidden input to emulate submit button click when posting the form -> field name posted
+								btn_submit.before('<input type="hidden" name="'+btn_submit.attr("name")+'" value="1" />');
+								$('#product_form').submit();
+								return false;
+							});
+							if (btn_save_and_stay) {
+								btn_save_and_stay.click(function() {
+									//add hidden input to emulate submit button click when posting the form -> field name posted
+									btn_submit.before('<input type="hidden" name="'+btn_submit.attr("name")+'AndStay" value="1" />');
+									$('#product_form').submit();
+									return false;
+								});
+							}
+						
+					}
+				});
+				//]]>
+			</script>
+			
+	<div class="table-responsive clearfix">
+		<table  id=product class="table  product" >
+			<thead>
+				<tr class="nodrag nodrop">
+											<th class="center fixed-width-xs"></th>
+															<th class="fixed-width-xs center">
+						<span class="title_box  active">
+															ID
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=id_product&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a class="active" href="index.php?controller=AdminProducts&amp;productOrderby=id_product&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class=" center">
+						<span class="title_box ">
+															Photo
+							
+													</span>
+					</th>
+										<th class="">
+						<span class="title_box ">
+															Name
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=name&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a  href="index.php?controller=AdminProducts&amp;productOrderby=name&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class=" left">
+						<span class="title_box ">
+															Reference
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=reference&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a  href="index.php?controller=AdminProducts&amp;productOrderby=reference&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class="">
+						<span class="title_box ">
+															Category
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=name_category&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a  href="index.php?controller=AdminProducts&amp;productOrderby=name_category&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class=" text-right">
+						<span class="title_box ">
+															Base price
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=price&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a  href="index.php?controller=AdminProducts&amp;productOrderby=price&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class=" text-right">
+						<span class="title_box ">
+															Final price
+							
+													</span>
+					</th>
+										<th class=" text-right">
+						<span class="title_box ">
+															Quantity
+							
+															<a   href="index.php?controller=AdminProducts&amp;productOrderby=sav_quantity&amp;productOrderway=desc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-down"></i>
+								</a>
+								<a  href="index.php?controller=AdminProducts&amp;productOrderby=sav_quantity&amp;productOrderway=asc&amp;token=581636f63518dbf72ece794e6a879ecb">
+									<i class="icon-caret-up"></i>
+								</a>
+													</span>
+					</th>
+										<th class="fixed-width-sm text-center">
+						<span class="title_box ">
+															Status
+							
+													</span>
+					</th>
+																					<th></th>
+									</tr>
+							<tr class="nodrag nodrop filter row_hover">
+											<th class="text-center">
+							--
+						</th>
+										
+											<th  class="center" >
+																								<input type="text" class="filter" name="productFilter_id_product" value=""  />
+																					</th>
+											<th  class="center" >
+															--
+													</th>
+											<th >
+																								<input type="text" class="filter" name="productFilter_b!name" value=""  />
+																					</th>
+											<th  class="left" >
+																								<input type="text" class="filter" name="productFilter_reference" value=""  />
+																					</th>
+											<th >
+																								<input type="text" class="filter" name="productFilter_cl!name" value=""  />
+																					</th>
+											<th  class="text-right" >
+																								<input type="text" class="filter" name="productFilter_a!price" value=""  />
+																					</th>
+											<th  class="text-right" >
+																								<input type="text" class="filter" name="productFilter_price_final" value=""  />
+																					</th>
+											<th  class="text-right" >
+																								<input type="text" class="filter" name="productFilter_sav!quantity" value=""  />
+																					</th>
+											<th  class="text-center" >
+																								<select class="filter fixed-width-sm" name="productFilter_active">
+										<option value="">-</option>
+										<option value="1" >Yes</option>
+										<option value="0" >No</option>
+									</select>
+																					</th>
+					
+																<th class="actions">
+														<span class="pull-right">
+								
+								<button type="submit" id="submitFilterButtonproduct" name="submitFilter" class="btn btn-default" data-list-id="product">
+									<i class="icon-search"></i> Search
+								</button>
+															</span>
+													</th>
+									</tr>
+						</thead>
+<tbody>
+	<tr
+		id="tr__1_0"		class=" odd"
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="1" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			1
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_1_1.jpg?time=1522871862" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Faded Short Sleeve T-shirts
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_1
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			T-shirts
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$16.51
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$15.68
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			4800
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=1&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=1&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=1&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=1&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=1&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Faded Short Sleeve T-shirts')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__2_0"		class=" "
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="2" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			2
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_2_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Blouse
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_2
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Blouses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$27.00
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$25.65
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			1786
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=2&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=2&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=2&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=2&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=2&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Blouse')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__3_0"		class=" odd"
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="3" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			3
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_3_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Printed Dress
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_3
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Casual Dresses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$26.00
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$24.70
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			891
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=3&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=3&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=3&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=3&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=3&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Printed Dress')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__4_0"		class=" "
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="4" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			4
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_4_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Printed Dress
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_4
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Evening Dresses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$50.99
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$48.44
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			893
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=4&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=4&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=4&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=4&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=4&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Printed Dress')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__5_0"		class=" odd"
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="5" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			5
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_5_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Printed Summer Dress
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_5
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Summer Dresses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$30.51
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$28.98
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			3596
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=5&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=5&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=5&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=5&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=5&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Printed Summer Dress')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__6_0"		class=" "
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="6" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			6
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_6_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Printed Summer Dress
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_6
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Summer Dresses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$30.50
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$28.98
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			897
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=6&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=6&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=6&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=6&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=6&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Printed Summer Dress')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__7_0"		class=" odd"
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="7" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			7
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_7_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Printed Chiffon Dress
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			demo_7
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Summer Dresses
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$20.50
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$16.40
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			1796
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=7&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=7&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=7&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=7&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=7&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Printed Chiffon Dress')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+	<tr
+		id="tr__8_0"		class=" "
+		 >
+					<td class="text-center">
+									<input type="checkbox" name="productBox[]" value="8" class="noborder" />
+							</td>
+							
+				<td
+										class="pointer										 fixed-width-xs					 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			8
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<img src="../img/tmp/product_mini_8_1.jpg?time=1522871863" alt="" class="imgm img-thumbnail" />
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Virtual Product Tester
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 left"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			Home
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$0.00
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			$0.00
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer															 text-right"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			2147483647
+																																
+			
+				</td>
+			
+					
+				<td
+										class="pointer										 fixed-width-sm					 text-center"
+											onclick="document.location = 'index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb'">
+								
+			
+																																			<a class="list-action-enable  action-enabled" href="index.php?controller=AdminProducts&amp;id_product=8&amp;statusproduct&amp;token=581636f63518dbf72ece794e6a879ecb"  title="Enabled">
+	<i class="icon-check"></i>
+	<i class="icon-remove hidden"></i>
+</a>
+
+																																
+			
+				</td>
+			
+		
+				<td class="text-right">
+																																																																																																																	<div class="btn-group-action">				<div class="btn-group pull-right">
+					<a href="index.php?controller=AdminProducts&id_product=8&updateproduct&token=581636f63518dbf72ece794e6a879ecb" title="Edit" class="edit btn btn-default">
+	<i class="icon-pencil"></i> Edit
+</a>
+										<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-caret-down"></i>&nbsp;
+					</button>
+						<ul class="dropdown-menu">
+																																	<li >
+								<a href="#" title="Duplicate" onclick="if (confirm('Copy images too?')) document.location = 'index.php?controller=AdminProducts&amp;id_product=8&amp;duplicateproduct&amp;token=581636f63518dbf72ece794e6a879ecb'; else document.location = 'index.php?controller=AdminProducts&amp;id_product=8&amp;duplicateproduct&amp;noimage=1&amp;token=581636f63518dbf72ece794e6a879ecb'; return false;">
+	<i class="icon-copy"></i> Duplicate
+</a>							</li>
+																											<li class="divider">
+															</li>
+																											<li >
+								<a href="index.php?controller=AdminProducts&amp;id_product=8&amp;deleteproduct&amp;token=581636f63518dbf72ece794e6a879ecb" onclick="if (confirm('Delete selected item?\n\nName Virtual Product Tester')){ return true; }else{ event.stopPropagation(); event.preventDefault();};" title="Delete" class="delete">
+	<i class="icon-trash"></i> Delete
+</a>							</li>
+																			</ul>
+									</div>
+				</div>					</td>
+		</tr>
+</tbody>
+
+	</table>
+</div>
+<div class="row">
+	<div class="col-lg-6">
+				<div class="btn-group bulk-actions">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Bulk actions <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#" onclick="javascript:checkDelBoxes($(this).closest('form').get(0), 'productBox[]', true);return false;">
+						<i class="icon-check-sign"></i>&nbsp;Select all
+					</a>
+				</li>
+				<li>
+					<a href="#" onclick="javascript:checkDelBoxes($(this).closest('form').get(0), 'productBox[]', false);return false;">
+						<i class="icon-check-empty"></i>&nbsp;Unselect all
+					</a>
+				</li>
+				<li class="divider"></li>
+									<li>
+												<a href="#" onclick="sendBulkAction($(this).closest('form').get(0), 'submitBulkenableSelectionproduct');">
+							<i class="icon-power-off text-success"></i>&nbsp;Enable selection
+						</a>
+											</li>
+									<li>
+												<a href="#" onclick="sendBulkAction($(this).closest('form').get(0), 'submitBulkdisableSelectionproduct');">
+							<i class="icon-power-off text-danger"></i>&nbsp;Disable selection
+						</a>
+											</li>
+									<li class="divider">
+											</li>
+									<li>
+												<a href="#" onclick="if (confirm('Delete selected items?'))sendBulkAction($(this).closest('form').get(0), 'submitBulkdeleteproduct');">
+							<i class="icon-trash"></i>&nbsp;Delete selected
+						</a>
+											</li>
+							</ul>
+		</div>
+			</div>
+	</div>
+
+			
+		<input type="hidden" name="token" value="581636f63518dbf72ece794e6a879ecb" />
+	</div>
+
+</form>
+
+
+
+		
+
+
+
+
+
+
+
+	</div>
+</div>
+<div id="footer" class="bootstrap hide">
+	<div class="col-sm-2 hidden-xs">
+		<a href="http://www.prestashop.com/" target="_blank">PrestaShop&trade; 1.6.0.6</a>
+		-
+		<span id="footer-load-time"><i class="icon-time" title="Load time"></i> 56.223s</span>
+	</div>
+	<div class="col-sm-2 hidden-xs social-networks">
+		<a class="link-social link-twitter" href="https://twitter.com/PrestaShop" target="_blank" title="Twitter">
+			<i class="icon-twitter"></i>
+		</a>
+		<a class="link-social link-facebook" href="https://www.facebook.com/prestashop" target="_blank" title="Facebook">
+			<i class="icon-facebook"></i>
+		</a>
+		<a class="link-social link-github" href="https://github.com/PrestaShop/PrestaShop/" target="_blank" title="Github">
+			<i class="icon-github"></i>
+		</a>
+		<a class="link-social link-google" href="https://plus.google.com/+prestashop/" target="_blank" title="Google">
+			<i class="icon-google-plus"></i>
+		</a>
+	</div>	
+
+	<div class="col-sm-4 footer-contact">
+		<p>
+			<a href="http://www.prestashop.com/en/contact_us?utm_source=backoffice_footer" target="_blank" class="footer_link">
+				<i class="icon-envelope"></i>
+				Contact
+			</a>
+			/&nbsp;
+			<a href="http://forge.prestashop.com/?utm_source=backoffice_footer" target="_blank" class="footer_link">
+				<i class="icon-bug"></i>
+				Bug Tracker
+			</a>
+			/&nbsp;
+			<a href="http://www.prestashop.com/forums/?utm_source=backoffice_footer" target="_blank" class="footer_link">
+				<i class="icon-comments"></i>
+				Forum
+			</a>
+			/&nbsp;
+			<a href="http://addons.prestashop.com/?utm_source=backoffice_footer" target="_blank" class="footer_link">
+				<i class="icon-puzzle-piece"></i>
+				Addons
+			</a>
+			/&nbsp;
+			<a href="http://www.prestashop.com/en/training-prestashop?utm_source=backoffice_footer" target="_blank" class="footer_link">
+				<i class="icon-book"></i>
+				Training
+			</a>
+		</p>
+			</div>
+	<div class="col-sm-4">
+		
+	</div>
+	<div id="go-top" class="hide"><i class="icon-arrow-up"></i></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "LoginPage" %}
+{% block content %}
+<div class="banner_1">
+	{{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+    <div class="single">  	      
+	   <div class="form-container" >
+        <h2>Ajouter un CV</h2>   
+		
+<form    action="{{ path('job_resume_add') }}"  method="post" {{ form_enctype(form) }}>
+   <div class="row">	   
+     <div class="form-group col-md-12">	
+	     <label for="intro"  class="col-md-3 control-lable"></label>	
+	    <div class="col-md-9">
+		<input name="id_employee" class="form-control input-sm input-sm" id="id_employee" type="hidden" value="">
+		<p class="help-block">Remplissez les champs suivant:</p>
+		</div>
+	 </div>		
+   </div>	
+   <div class="row">
+  <div class="form-group col-md-12">	   
+    <label for="resume_alias"  class="col-md-3 control-lable">{{ form_label(form.resume_alias,'Nom du CV:') }}</label>	
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_alias) }}
+    {{ form_widget(form.resume_alias, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	<p class="help-block">Exemple: Agent Commercial; Developpeur Web; Expert Comptable etc.</p>
+	</div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="form-group col-md-12">   	
+    <label for="resume_firstname"  class="col-md-3 control-lable"> {{ form_label(form.resume_firstname,'Prenom:') }}</label>
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_firstname) }}
+    {{ form_widget(form.resume_firstname, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="form-group col-md-12">   	
+    <label for="resume_lastname"  class="col-md-3 control-lable">{{ form_label(form.resume_lastname,'Nom:') }}</label>
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_lastname) }}
+    {{ form_widget(form.resume_lastname, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="form-group col-md-12">   	
+    <label for="resume_email"  class="col-md-3 control-lable">{{ form_label(form.resume_email,'Email:') }}</label>
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_email) }}
+    {{ form_widget(form.resume_email, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>
+  
+  
+  <div class="row">
+  <div class="form-group col-md-12">   
+    <label for="resume_phone" class="col-md-3 control-lable">{{ form_label(form.resume_phone,'Numero de Telephone:') }}</label>
+    <div class="col-md-9">		
+	{{ form_errors(form.resume_phone) }}
+    {{ form_widget(form.resume_phone, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>  
+  
+  <div class="row">
+  <div class="form-group col-md-12">   
+    <label for="resume_address_one"  class="col-md-3 control-lable">{{ form_label(form.resume_address_one,'Addresse::') }}</label>	
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_address_one) }}
+    {{ form_widget(form.resume_address_one, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>  
+  
+  <div class="row">
+  <div class="form-group col-md-12">   
+    <label for="resume_address_two"  class="col-md-3 control-lable">{{ form_label(form.resume_address_two,'Addresse Suite:') }}</label>	
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_address_two) }}
+    {{ form_widget(form.resume_address_two, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	</div>
+  </div>
+  </div>  
+  
+   <div class="row">
+   <div class="form-group col-md-12">
+    <label for="resume_region" class="col-md-3 control-lable">Region:</label>	
+	<div class="col-md-9">
+	<select name="resume_region"  class="form-control input-sm input-sm" id="resume_region" >
+	 {% for region in regions %}	
+	<option value="{{region.id}}">{{region.name}}</option>
+      {% endfor %}	
+	</select>
+	</div>
+    </div> 
+	</div>  
+	
+  <div class="row">
+    <div class="form-group col-md-12">
+    <label class="col-md-3 control-lable" for="resume_diplome_level">Education</label>
+    <div class="col-md-9">
+    <select path="resume_diplome_level" id="resume_diplome_level" class="form-control input-sm input-sm">
+    <option value="">Choisir</option>
+        <option value="1">Licence</option>
+        <option value="2">Maitrise</option>
+        <option value="3">Bachelor</option>
+        <option value="4">Master</option>
+        <option value="5">PhD</option> 
+        <option value="6">Autre</option> 
+    </select>
+    </div>
+    </div>
+  </div>
+  
+  
+  <div class="row">
+  <div class="form-group col-md-12">   
+    <label for="resume_diplome"  class="col-md-3 control-lable"> {{ form_label(form.resume_diplome,'Diplome obtenu:') }}</label>	
+	<div class="col-md-9">	
+	{{ form_errors(form.resume_diplome) }}
+    {{ form_widget(form.resume_diplome, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	<p class="help-block">Renseigner le nom de votre Diplome, Certicat ou autre.</p>
+	</div>
+  </div>
+  </div>  
+  
+  <div class="row">
+  <div class="form-group col-md-12">   
+    <label for="resume_diplome_university"  class="col-md-3 control-lable"> {{ form_label(form.resume_diplome_university,'Etablissement:') }}</label>
+    <div class="col-md-9">		
+	{{ form_errors(form.resume_diplome_university) }}
+    {{ form_widget(form.resume_diplome_university, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	<p class="help-block">Renseigner le nom l'etablissement ou vous avez obtenu ce  Diplome, Certificat ou autre.</p>
+	</div>
+  </div>
+  </div>  
+   
+   <div class="row">
+   <div class="form-group col-md-12">   
+    <label for="resume_diplome_country"  class="col-md-3 control-lable">Diplome obtenu Pays </label>	
+	<div class="col-md-9">
+	<select name="resume_diplome_country" id="resume_diplome_country" class="form-control input-sm input-sm">
+                        <option value="1">Choisir le Pays</option>
+                        <option value="2">Japan</option>                        
+                        <option value="3">Saudi Arabia</option> 
+                        <option value="4">Poland</option> 
+    </select>
+	<p class="help-block">Dans quel Pays avez vous obtenu ce Diplome?</p>
+	</div>
+  </div>  
+  </div>  
+  <div class="row">
+   <div class="form-group col-md-12">   
+    <label for="resume_diplome_year"  class="col-md-3 control-lable"> {{ form_label(form.resume_diplome_year,'Diplome obtenu Annee:') }}</label>
+     <div class="col-md-9">		
+	{{ form_errors(form.resume_diplome_year) }}
+    {{ form_widget(form.resume_diplome_year, { 'attr':{'class': 'form-control input-sm' }}) }}	
+	<p class="help-block">En quelle annee avez eu ce Diplome.</p>
+	</div>
+  </div>  
+  </div>    
+	
+    <div class="row">
+  <div class="form-group col-md-12">	
+    <label for="resume_skills"  class="col-md-3 control-lable">{{ form_label(form.resume_skills,'Lister Vos competances') }}</label>	
+	<div class="col-md-9">
+	{{ form_errors(form.resume_skills) }}
+    {{ form_widget(form.resume_skills, { 'attr':{'class': 'form-control' }}) }}	
+	<p class="help-block">Decriver vos competances.</p>
+	</div>
+  </div>  
+    </div>  
+	
+	<div class="row">
+  <div class="form-group col-md-12">	
+    <label for="resume_hobby"  class="col-md-3 control-lable">{{ form_label(form.resume_hobby,'Loisirs: Ajouter vos loisirs') }}</label>	
+	<div class="col-md-9">
+	{{ form_errors(form.resume_hobby) }}
+    {{ form_widget(form.resume_hobby, { 'attr':{'class': 'form-control' }}) }}	
+	<p class="help-block">Decriver vos loisirs.</p>
+	</div>
+  </div>  
+    </div>  
+	
+  
+   <div class="row">
+       <div class="form-actions floatRight">       
+	   {{ form_widget(form.Ajouter, { 'attr':{'class': 'btn btn-primary btn-sm'}}) }}
+       </div> 
+    </div> 
+	
+	 {{ form_rest(form) }}
+	
+</form>				
+	    
+    </div>	
+	
+ </div>
+</div>
+
+{% endblock %}

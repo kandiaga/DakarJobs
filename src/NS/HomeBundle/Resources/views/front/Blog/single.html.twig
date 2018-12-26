@@ -1,0 +1,70 @@
+{% extends "HomeBundle::layout.html.twig" %}
+{% block title "BlogPostPage" %}
+{% block content %}
+{#{ include("HomeBundle:front/Job:menu.html.twig") }#}
+<div class="banner_1">   
+   {{ include('HomeBundle::HomePage/search_form_single.html.twig') }}
+</div>	
+<div class="container">
+    <div class="single">  
+	    <!--left column--->	
+	    <div class="col-md-4">
+	      <div class="col_3">
+	   	  {{ include('HomeBundle::HomePage/todays_jobs.html.twig') }}
+		  </div>
+	   	  <div class="col_3">
+		  {{ include('HomeBundle::HomePage/jobs_by_category.html.twig') }}	   	  	
+	   	  </div>
+         </div>		  
+    <!--end of left column--->	 
+
+	 </div>
+	 <div class="col-md-8 single_right">
+	      <h3>{{blog.title}}</h3>
+	      <div class="row_1">
+	      	<div class="col-sm-5 single_img">
+	      		<img src="{{ asset('bundles/home/images/') }}{{blog.img}}" class="img-responsive" alt=""/>
+	      	</div>
+	      	<div class="col-sm-7 single-para">
+	      		<p>{{blog.content[:320] ~ '...'}}</p>	      		
+	      	</div>
+	      	<div class="clearfix"> </div>
+	      </div>
+	      <h5>{#{blog.title}#}</h5>
+	      <p> {{blog.content}} </p>	
+
+           <ul>
+		   <hr/>
+		   <h3>Articles similaires</h3>
+          {% for blog in  blog_posts|slice(0,5) %}
+         <li> <h4><a href="{{ path('job_blogpost',{'idpost': blog.id}) }}">{{blog.title}}</a></h4></li>
+          {% endfor %} 		
+          </ul>		  
+		  
+		  <div class="comments">
+	      	<h6>Commentaires</h6>
+            <div id="fb-root"></div>
+
+             <script>
+			 (function(d, s, id) {
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                 js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+			  </script>
+
+
+
+<div class="fb-comments" data-href="{{page_url}}" data-width="600" data-numposts="{{default_number}}"></div>
+			
+			
+		  </div>		  
+	   </div>
+	   <div class="clearfix"> </div>
+	 </div>
+</div>
+
+
+{% endblock %}
